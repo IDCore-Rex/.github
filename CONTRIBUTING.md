@@ -5,7 +5,7 @@ First off, thank you so much for taking the time to contribute. All contribution
 ## Boyscout Principle
 
 We follow the Boyscout Principle or Boyscout Rule to help ensure the maintainability of our code bases.
-The original Boyscout Rule reads as, "Always leave the campsite cleaner than you found it.". You may have
+The original Boyscout Rule reads, "Always leave the campsite cleaner than you found it.". You may have
 heard this adapted for software as principle expressed as, "Always leave the code better than you found it."
 The purpose of this principle is to help reduce tech-debt through small consistent efforts in every pull request.
 
@@ -19,13 +19,13 @@ In general
 - If there is a more efficient way to implement a function make it more efficient.
 
 
-## Structured commit messages
+## Commit Hygeine
 
-- Limit the subject line to 72 characters
-- Capitalize the first letter of the subject line
-- Use the present tense ("Add feature" instead of "Added feature")
-- Separate the subject from the body with a blank line
-- Reference issues and pull requests in the commit body
+- Commit early and often
+- You commit should be able to be cherry-picked and result in a successful build.
+- Use the present tense ("Add feature" instead of "Added feature") in commit messages.
+- Reference issues and pull requests in the commit body (This is useful for the Github -> Jira integration)
+- Before submitting a PR clean-up your commit history so it follows the above guidelines.
 
 
 ## Coding style guide
@@ -39,7 +39,7 @@ Please make sure that the code you are pushing conforms to the style guides ment
 
 ## Tests
 
-We encourage a test driven approach to software development. That being said we understand not every developer wants to follow strict TDD disciplines.
+We encourage a test driven approach to software development. That being said we understand not every developer wants to follow strict TDD disciplines. There are times where you need to prototype functionality to understand how a feature will work. In such cases strict TDD is a hinderance.
 To bridge the gap we ask that every PR be accompanied with tests that prove the bugfix/feature functions work as expected.
 
 **You need to include tests**
@@ -50,7 +50,7 @@ To bridge the gap we ask that every PR be accompanied with tests that prove the 
 
 **You DON'T need to include tests**
 
-- When you are making developer changes (i.e. refactoing that doesn't introduce new functionality, doc changes etc.)
+- When you are making developer changes (i.e. refactoring that doesn't introduce new functionality, doc changes etc.)
 
 
 ## Pull Request Process
