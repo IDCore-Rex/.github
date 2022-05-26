@@ -1,6 +1,6 @@
 # Description of Work
 
-[Jira Ticket](https://idcore.atlassian.net/browse/OE-XXX)
+[Jira Ticket](https://idcore.atlassian.net/browse/IDC-XXX)
 
 Include a description of the work including research, list of changes, concerns and any notes.
 
