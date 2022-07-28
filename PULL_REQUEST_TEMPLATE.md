@@ -15,8 +15,12 @@ Include a description of the work including research, list of changes, concerns 
 
 # Testing Steps
 
-Please include the steps QA will use to test your changes.
-If you selected Developer Change above you can skip this section.
+- [ ] run `yarn test`
+- [ ] use the ____add_request_name____ request in the [Core-API/Facade] Postman Workspace
+- [ ] follow the steps listed below
+  ```
+  1. Enter step one
+  ```
 
 
 # Definition of Done Checklist
