@@ -19,13 +19,13 @@ In general
 - If there is a more efficient way to implement a function make it more efficient.
 
 
-## Commit Hygeine
+## Commit Best Practices
 
-- Commit early and often
-- You commit should be able to be cherry-picked and result in a successful build.
+- Commit early and often.
+- Each commit should result in a successful build if cherry-picked into another branch.
 - Use the present tense ("Add feature" instead of "Added feature") in commit messages.
 - Reference issues and pull requests in the commit body (This is useful for the Github -> Jira integration)
-- Before submitting a PR clean-up your commit history so it follows the above guidelines.
+- Before submitting a PR clean-up your commit history. (i.e. run `git rebase -i origin/main`)
 
 
 ## Coding style guide
@@ -37,26 +37,28 @@ Some other ESLint plugins are also being used, such as the [Prettier](https://gi
 Please make sure that the code you are pushing conforms to the style guides mentioned above.
 
 
-## Tests
+## Testing
 
-We encourage a test driven approach to software development. That being said we understand not every developer wants to follow strict TDD disciplines. There are times where you need to prototype functionality to understand how a feature will work. In such cases strict TDD is a hinderance.
-To bridge the gap we ask that every PR be accompanied with tests that prove the bugfix/feature functions work as expected.
-
-**You need to include tests**
+Tests are required for every PR that meets one of the following conditions.
 
 - If you are adding net new code.
 - If you are implementing a bugfix with existing tests. (At the very least the existing tests should be updated for the bugfix)
-- If an modifying a section of code that was previously untested please provide tests for that code.
+- If an modifying a section of code that was previously untested (This is part of the Boyscout Principle)
 
-**You DON'T need to include tests**
+Test Driven Development (TDD) is encouraged, however we understand not every developer wants to follow strict TDD disciplines
+and there are times when you need to prototype functionality to understand how a feature will work. In such cases strict TDD
+is a hinderance. You choose when you write your tests but tests will be required.
 
-- When you are making developer changes (i.e. refactoring that doesn't introduce new functionality, doc changes etc.)
 
+## Pull Requests & Code Review Process
 
-## Pull Request Process
-
-- When creating a pull request please fill out the template provided as best as you can.
-At a minimum, complete the definition of done checklist and provide a brief description
-of what the PR accomplishes (i.e. what bug it resolves or feature it implements).
-- Pull Requests require approval by at least 1 of the code owners before they can be merged.
-- Pull Requests should be merged into the `main` branch.
+- Pull Requests (PRs) should target the `main` branch.
+- A Pull Requests (PR) is needed for each feature, bugfix, or developer change.
+- A PR should only contain commits specific to a **single** feature, bugfix or developer change. This makes it easier
+  to review and to revert the change in the event it breaks something.
+- When creating a PR it is **required** the PR Template is filled out completely. If you're confused about any part of
+  the template you can read the [PR Template FAQ](https://idcore.atlassian.net/wiki/spaces/IDCORE/pages/9043982/Pull+Request+Template+FAQs)
+- PRs require approval from at least 1 code owner before they can be merged.
+  - If your PR has gone more than a 24 hours without a review please tag a maintainer to review it.
+- All conversations on the PR need to be resolved before it can be merged. This is just a way to ensure the author and
+  reviewer have come to an agreement on all the comments, and questions left during code review.
